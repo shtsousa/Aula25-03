@@ -8,7 +8,46 @@ def terceira_parte():
     print(f'Symetric Difference: {set_a ^ set_b}')
 
 
+def quarta_parte():
+    data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print(type(data))
+    print(f'list_data: {data}')
+
+    data_filtered = list(filter(lambda i: i % 2 == 0, data))
+
+    print(f'date_filtered: {data_filtered}')
+
+    def is_even(i):
+        data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28,
+                29]
+        print(data)
+        print(f'list_data: {data}')
+
+        data_filtered = list(filter(lambda i: i % 2 == 0, data))
+
+        print(f'date_filtered: {data_filtered}')
+        return i % 2 == 0
+
+    data_filtered = list(filter(is_even, data))
+    print(f'data_filtered(even numbers)(função de baixa ordem) = {data_filtered}')
+
+    person_data = [person('Fabricio', 39), person('Pollyana', 22), person('Samuel', 25), person('Nayara', 23)]
+    print('\n')
+    print('-' * 25)
+    for person in person_data:
+        print(person, end=', ')
+
+    person_filtered = list(filter
+                           (lambda person: person.age >= 18,
+                            person_data
+
+                            ))
+    print(person_data)
+
+
 terceira_parte()
+quarta_parte()
+is_even()
 
 # if __name__ == '__main__':
 #     # criando dicionarios
